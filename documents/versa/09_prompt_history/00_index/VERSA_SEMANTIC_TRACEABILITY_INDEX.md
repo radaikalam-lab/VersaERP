@@ -35,6 +35,9 @@ Reverse Traceability:
 | **`SEM-UOM-001`** (Physical GLM Relationship) | `P04-001`, `P04-002` | Fabric Physical Formula | `DEC-011` | `02_contracts/VERSA_QUALITY_CONTRACT.md` §3 | `bench/apps/versa_quality/versa_quality/evaluator.py` | `test_quality_runtime.py::TestPhysicalMeasurementValidation` | `05_validation/VERSA_TEXTILE_MEASUREMENT_EVIDENCE.md` | `VERIFIED` |
 | **`SEM-JOB-001`** (Job Work Mass Balance) | `P04-001`, `P04-002` | Tiruppur Process Loss | TBD (Phase 5/6) | `02_contracts/VERSA_JOBWORK_CONTRACT.md` | Deferred to Phase 6 | Deferred | `05_validation/VERSA_JOB_WORK_SEMANTIC_GAP_ANALYSIS.md` | `DEFERRED` |
 | **`SEM-MAT-001`** (Order Matrix Conservation) | `P04-001`, `P04-002` | ERPNext #41950 Case | TBD (Phase 5) | `02_contracts/VERSA_O2C_CONTRACT.md` | Deferred to Phase 5 | Deferred | `05_validation/VERSA_APPAREL_MATRIX_SEMANTIC_GAP_ANALYSIS.md` | `DEFERRED` |
+| **`SEM-TEX-001`** (Process Mass Balance) | `P05-002` | Tiruppur Milling Practices | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-001`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
+| **`SEM-TEX-002`** (Piece-Goods Dynamic GLM) | `P05-002` | ISO 3801 / ASTM D3776 | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-002`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
+| **`SEM-TEX-003`** (Fabric Roll Traceability Overlay) | `P05-002` | ERPNext Stock Ledger Invariant | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-003`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
 
 ---
 
@@ -85,3 +88,27 @@ Test test_company_isolation.py (Fail-Closed 1 = 0)
    ▼
 Validation VERSA_PHASE_3_HARDENING_REPORT.md (PASS)
 ```
+
+### Chain 3: Textile Processing Semantic Definition & Conservation Gate
+```text
+Prompt P05-002 (Phase 5 Semantic Definition)
+   │
+   ▼
+Evidence Tiruppur Mill Archeology & Industrial Mass Balance
+   │
+   ▼
+Decision DEC-012 (Phase 5 Textile Processing Decisions)
+   │
+   ▼
+Contract VERSA_TEXTILE_PROCESS_CONTRACT.md (CONTRACT-005: R-TEX-001 to R-TEX-005)
+   │
+   ▼
+Domain Model VERSA_TEXTILE_PROCESS_SEMANTIC_MODEL.md
+   │
+   ▼
+Architecture VERSA_TEXTILE_PROCESS_ARCHITECTURE.md (Non-Invasive Overlay)
+   │
+   ▼
+Validation VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md & Report (PASS)
+```
+
