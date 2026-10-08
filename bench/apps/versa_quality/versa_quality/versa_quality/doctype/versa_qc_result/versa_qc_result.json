@@ -1,0 +1,280 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-10-08 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "company",
+  "qc_spec",
+  "spec_version",
+  "inspection_type",
+  "source_doctype",
+  "source_name",
+  "column_break_1",
+  "item",
+  "batch",
+  "roll_barcode",
+  "sample_size",
+  "inspected_by",
+  "inspection_date",
+  "inspection_time",
+  "section_break_disposition",
+  "overall_status",
+  "evaluation_summary",
+  "concession_reason",
+  "concession_approved_by",
+  "concession_approval_date",
+  "column_break_defect",
+  "inspected_length_yds",
+  "cuttable_width_inches",
+  "total_defect_points",
+  "defect_score_4point",
+  "section_break_measurements",
+  "measurements",
+  "section_break_readings",
+  "readings"
+ ],
+ "fields": [
+  {
+   "default": "VQR-.YYYY.-.#####.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "VQR-.YYYY.-.#####.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qc_spec",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "QC Specification",
+   "options": "Versa QC Spec",
+   "reqd": 1
+  },
+  {
+   "fieldname": "spec_version",
+   "fieldtype": "Data",
+   "label": "Spec Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Inspection Type",
+   "options": "Incoming Material\nIn-Process Job Work\nCutting Panel\nStitching Inline\nFinal Garment AQL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Select",
+   "label": "Source DocType",
+   "options": "Purchase Receipt\nVersa Job Work Order\nStock Entry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Name",
+   "options": "source_doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "roll_barcode",
+   "fieldtype": "Data",
+   "label": "Fabric Roll Barcode"
+  },
+  {
+   "default": "1",
+   "fieldname": "sample_size",
+   "fieldtype": "Int",
+   "label": "Sample Size",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspected_by",
+   "fieldtype": "Link",
+   "label": "Inspected By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "label": "Inspection Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "inspection_time",
+   "fieldtype": "Time",
+   "label": "Inspection Time"
+  },
+  {
+   "fieldname": "section_break_disposition",
+   "fieldtype": "Section Break",
+   "label": "Quality Disposition & Concession"
+  },
+  {
+   "default": "Quarantine",
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall QC Status",
+   "options": "Draft\nAccepted\nAccepted with Concession\nQuarantine\nRejected\nInconclusive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evaluation_summary",
+   "fieldtype": "Small Text",
+   "label": "Evaluation Summary",
+   "read_only": 1
+  },
+  {
+   "fieldname": "concession_reason",
+   "fieldtype": "Small Text",
+   "label": "Concession Reason"
+  },
+  {
+   "fieldname": "concession_approved_by",
+   "fieldtype": "Link",
+   "label": "Concession Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "concession_approval_date",
+   "fieldtype": "Date",
+   "label": "Concession Approval Date"
+  },
+  {
+   "fieldname": "column_break_defect",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inspected_length_yds",
+   "fieldtype": "Float",
+   "label": "Inspected Length (Yds)"
+  },
+  {
+   "fieldname": "cuttable_width_inches",
+   "fieldtype": "Float",
+   "label": "Cuttable Width (Inches)"
+  },
+  {
+   "fieldname": "total_defect_points",
+   "fieldtype": "Float",
+   "label": "Total Defect Points"
+  },
+  {
+   "fieldname": "defect_score_4point",
+   "fieldtype": "Float",
+   "label": "4-Point Defect Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_measurements",
+   "fieldtype": "Section Break",
+   "label": "Evaluated Measurements"
+  },
+  {
+   "fieldname": "measurements",
+   "fieldtype": "Table",
+   "label": "Measurements",
+   "options": "Versa QC Measurement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_readings",
+   "fieldtype": "Section Break",
+   "label": "Multi-Point Observed Readings & Provenance"
+  },
+  {
+   "fieldname": "readings",
+   "fieldtype": "Table",
+   "label": "Readings",
+   "options": "Versa QC Reading"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-08 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Versa Quality",
+ "name": "Versa QC Result",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality User",
+   "share": 0,
+   "submit": 0,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

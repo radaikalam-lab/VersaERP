@@ -1,0 +1,48 @@
+[
+  {
+    "dt": "Purchase Order",
+    "fieldname": "versa_approval_rule",
+    "fieldtype": "Link",
+    "label": "Versa Approval Rule",
+    "options": "Versa Approval Rule",
+    "insert_after": "status",
+    "read_only": 1,
+    "module": "Versa Core"
+  },
+  {
+    "dt": "Sales Order",
+    "fieldname": "versa_approval_rule",
+    "fieldtype": "Link",
+    "label": "Versa Approval Rule",
+    "options": "Versa Approval Rule",
+    "insert_after": "status",
+    "read_only": 1,
+    "module": "Versa Core"
+  },
+  {
+    "dt": "Cost Center",
+    "fieldname": "versa_business_unit_type",
+    "fieldtype": "Select",
+    "label": "Business Unit Type",
+    "options": "Spinning Mill\\nKnitting Unit\\nDyeing House\\nPrinting Unit\\nGarment Stitching\\nFinishing & Packing\\nCorporate",
+    "insert_after": "cost_center_name",
+    "module": "Versa Core"
+  },
+  {
+    "dt": "Supplier",
+    "fieldname": "versa_otif_score",
+    "fieldtype": "Float",
+    "label": "OTIF Score (%)",
+    "read_only": 1,
+    "default": "100.0",
+    "module": "Versa Core"
+  },
+  {
+    "dt": "Company",
+    "fieldname": "versa_default_jobwork_loss_tolerance",
+    "fieldtype": "Float",
+    "label": "Default Job Work Loss Tolerance (%)",
+    "default": "3.0",
+    "module": "Versa Core"
+  }
+]

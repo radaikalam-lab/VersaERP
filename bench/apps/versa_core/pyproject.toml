@@ -1,0 +1,22 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "versa_core"
+version = "1.0.0"
+description = "Versa ERP Core Platform: Governance, Multi-Level Approvals, Credit Policies & Tenant Isolation"
+authors = [{name = "Versa ERP Platform Team"}]
+dependencies = [
+    "frappe",
+    "erpnext"
+]
+readme = "README.md"
+classifiers = [
+    "Framework :: Frappe",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13"
+]

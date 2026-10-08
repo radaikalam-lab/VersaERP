@@ -1,0 +1,7 @@
+{
+  "db_name": "versa_dev",
+  "db_type": "mariadb",
+  "db_host": "localhost",
+  "db_port": 3306,
+  "developer_mode": 1
+}

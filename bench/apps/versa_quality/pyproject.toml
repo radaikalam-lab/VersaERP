@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "versa_quality"
+version = "0.1.0"
+description = "Versa ERP Quality: Multi-Tier Textile QA/QC, Versioned Specifications, Multi-Point Measurements & Quality Gates"
+readme = "README.md"
+authors = [{ name = "Versa ERP Platform Team", email = "quality@versaerp.com" }]
+license = { text = "Proprietary" }
+dependencies = [
+    "frappe",
+    "erpnext",
+    "versa_core"
+]
+
+[project.urls]
+Homepage = "https://versaerp.com"
+Repository = "https://github.com/versaerp/versa_quality"

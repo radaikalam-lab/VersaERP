@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-08 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter_code",
+  "parameter_name",
+  "test_method",
+  "severity",
+  "target_value",
+  "min_limit",
+  "max_limit",
+  "column_break_1",
+  "reading_count",
+  "mean_reading",
+  "min_reading",
+  "max_reading",
+  "std_dev_reading",
+  "reading_status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parameter_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter Name"
+  },
+  {
+   "fieldname": "test_method",
+   "fieldtype": "Data",
+   "label": "Test Method"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Critical\nMajor\nMinor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_value",
+   "fieldtype": "Data",
+   "label": "Target Value"
+  },
+  {
+   "fieldname": "min_limit",
+   "fieldtype": "Float",
+   "label": "Min Limit"
+  },
+  {
+   "fieldname": "max_limit",
+   "fieldtype": "Float",
+   "label": "Max Limit"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "reading_count",
+   "fieldtype": "Int",
+   "label": "Readings Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mean_reading",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Mean Reading",
+   "read_only": 1
+  },
+  {
+   "fieldname": "min_reading",
+   "fieldtype": "Float",
+   "label": "Min Reading",
+   "read_only": 1
+  },
+  {
+   "fieldname": "max_reading",
+   "fieldtype": "Float",
+   "label": "Max Reading",
+   "read_only": 1
+  },
+  {
+   "fieldname": "std_dev_reading",
+   "fieldtype": "Float",
+   "label": "Std Deviation",
+   "read_only": 1
+  },
+  {
+   "default": "Not Evaluated",
+   "fieldname": "reading_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Reading Status",
+   "options": "Pass\nFail\nConcession\nInconclusive\nNot Evaluated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks / Evaluation Reason"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-08 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Versa Quality",
+ "name": "Versa QC Measurement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

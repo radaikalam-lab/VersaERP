@@ -1,0 +1,104 @@
+services:
+  mariadb:
+    image: mariadb:10.6
+    container_name: versa_mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-versa_root_secure_pass}
+      MYSQL_USER: ${MARIADB_USER:-frappe}
+      MYSQL_PASSWORD: ${MARIADB_PASSWORD:-frappe_db_pass}
+    volumes:
+      - versa_mariadb_data:/var/lib/mysql
+      - ./mariadb.cnf:/etc/mysql/conf.d/versa.cnf:ro
+    ports:
+      - "${MARIADB_PORT:-3307}:3306"
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping -h localhost -uroot -p$${MYSQL_ROOT_PASSWORD} || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - versa_network
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: versa_redis_cache
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - versa_redis_cache_data:/data
+    ports:
+      - "${REDIS_CACHE_PORT:-6381}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - versa_network
+
+  redis-queue:
+    image: redis:7-alpine
+    container_name: versa_redis_queue
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - versa_redis_queue_data:/data
+    ports:
+      - "${REDIS_QUEUE_PORT:-6382}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - versa_network
+
+  backend:
+    build:
+      context: ../..
+      dockerfile: deployment/docker/Dockerfile
+    image: versa-erp-runtime:15.122.0
+    container_name: versa_backend
+    restart: unless-stopped
+    environment:
+      DB_HOST: mariadb
+      MARIADB_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-versa_root_secure_pass}
+      REDIS_CACHE_HOST: redis-cache
+      REDIS_QUEUE_HOST: redis-queue
+    volumes:
+      - versa_sites_data:/home/frappe/frappe-bench/sites
+    ports:
+      - "${BACKEND_PORT:-8008}:8000"
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis-cache:
+        condition: service_healthy
+      redis-queue:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import frappe, erpnext, versa_core; print('OK')"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - versa_network
+
+volumes:
+  versa_mariadb_data:
+    name: versa_mariadb_data
+  versa_redis_cache_data:
+    name: versa_redis_cache_data
+  versa_redis_queue_data:
+    name: versa_redis_queue_data
+  versa_sites_data:
+    name: versa_sites_data
+
+networks:
+  versa_network:
+    name: versa_network
+    driver: bridge

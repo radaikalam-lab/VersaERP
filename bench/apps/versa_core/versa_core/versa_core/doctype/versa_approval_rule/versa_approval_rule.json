@@ -1,0 +1,99 @@
+{
+  "name": "Versa Approval Rule",
+  "doctype": "DocType",
+  "module": "Versa Core",
+  "custom": 0,
+  "is_submittable": 0,
+  "issingle": 0,
+  "istable": 0,
+  "autoname": "naming_series:",
+  "naming_rule": "By \"Naming Series\" field",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Versa Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "All",
+      "read": 1
+    }
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "VAR-.document_type.-.#####.",
+      "reqd": 1,
+      "hidden": 1
+    },
+    {
+      "fieldname": "document_type",
+      "fieldtype": "Select",
+      "label": "Document Type",
+      "options": "Purchase Order\nSales Order\nVersa Job Work Order\nQuotation",
+      "reqd": 1,
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "company",
+      "fieldtype": "Link",
+      "label": "Company",
+      "options": "Company",
+      "in_list_view": 1,
+      "in_standard_filter": 1
+    },
+    {
+      "fieldname": "min_amount",
+      "fieldtype": "Currency",
+      "label": "Minimum Amount",
+      "reqd": 1,
+      "in_list_view": 1,
+      "default": "0.00"
+    },
+    {
+      "fieldname": "max_amount",
+      "fieldtype": "Currency",
+      "label": "Maximum Amount",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "approver_role",
+      "fieldtype": "Link",
+      "label": "Approver Role",
+      "options": "Role",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "approver_user",
+      "fieldtype": "Link",
+      "label": "Specific Approver User",
+      "options": "User"
+    },
+    {
+      "fieldname": "business_unit",
+      "fieldtype": "Link",
+      "label": "Business Unit (Cost Center)",
+      "options": "Cost Center"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1",
+      "in_list_view": 1
+    }
+  ]
+}

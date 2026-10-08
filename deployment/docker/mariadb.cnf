@@ -1,0 +1,13 @@
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+innodb-file-per-table = 1
+innodb_buffer_pool_size = 256M
+innodb_log_file_size = 64M
+max_allowed_packet = 256M
+sql_mode = ""
+
+[mysql]
+default-character-set = utf8mb4

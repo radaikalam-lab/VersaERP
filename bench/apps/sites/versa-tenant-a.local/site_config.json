@@ -1,0 +1,7 @@
+{
+  "db_name": "tenant_a_db",
+  "db_type": "mariadb",
+  "db_host": "localhost",
+  "db_port": 3306,
+  "developer_mode": 1
+}

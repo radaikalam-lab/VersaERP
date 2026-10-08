@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-10-08 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parameter_code",
+  "reading_no",
+  "reading_value",
+  "sampling_point",
+  "column_break_1",
+  "timestamp",
+  "operator",
+  "instrument",
+  "calibration_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "parameter_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parameter Code",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "reading_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Reading #",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reading_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Observed Reading Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sampling_point",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sampling Point (e.g. Left/Center/Right)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "Measurement Timestamp"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Operator / Tester",
+   "options": "User"
+  },
+  {
+   "fieldname": "instrument",
+   "fieldtype": "Data",
+   "label": "Test Instrument / Method"
+  },
+  {
+   "fieldname": "calibration_ref",
+   "fieldtype": "Data",
+   "label": "Calibration Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-08 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Versa Quality",
+ "name": "Versa QC Reading",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
