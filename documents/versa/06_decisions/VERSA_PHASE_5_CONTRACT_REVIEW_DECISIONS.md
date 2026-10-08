@@ -5,7 +5,7 @@
 **Governing Prompt:** [`P05_003_ADVERSARIAL_TEXTILE_CONTRACT_REVIEW.md`](file:///e:/VersaERP/documents/versa/09_prompt_history/PHASE_05/P05_003_ADVERSARIAL_TEXTILE_CONTRACT_REVIEW.md)  
 **Target Contract:** [`CONTRACT-005` (Versa Textile Process Contract)](file:///e:/VersaERP/documents/versa/02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md)  
 **Date:** 2026-10-08  
-**Status:** `PROPOSED / READY FOR ARCHITECTURAL APPROVAL`  
+**Status:** `RESOLVED & APPROVED (See VERSA_PHASE_5_DECISION_RESOLUTION.md)`  
 
 ---
 

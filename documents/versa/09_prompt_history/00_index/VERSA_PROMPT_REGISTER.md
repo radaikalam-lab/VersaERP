@@ -28,15 +28,17 @@
 | **`P05-001`** | Phase 5 | `RESERVED` | Textile processing & domain workflows initiation | `09_prompt_history/PHASE_05/README.md` | TBD | Phase 5 Scoping | Phase 5 Bootstrap | `PENDING` |
 | **`P05-002`** | Phase 5 | `ORIGINAL` | Textile processing & fabric processing semantic model definition & gate | `09_prompt_history/PHASE_05/P05_002_TEXTILE_PROCESS_SEMANTIC_DEFINITION.md` | `DEC-012` | `CONTRACT-005` | None (Specification Gate Only) | `COMPLETED` |
 | **`P05-003`** | Phase 5 | `ORIGINAL` | Adversarial textile contract review of CONTRACT-005 & decision candidates | `09_prompt_history/PHASE_05/P05_003_ADVERSARIAL_TEXTILE_CONTRACT_REVIEW.md` | `DEC-013` (Cand.) | `CONTRACT-005` (Clarifications) | None (Review Gate Only) | `COMPLETED` |
+| **`P05-004`** | Phase 5 | `ORIGINAL` | Decision resolution (DEC-013) & CONTRACT-005 v1.1 contract freeze gate | `09_prompt_history/PHASE_05/P05_004_DECISION_RESOLUTION_AND_CONTRACT_FREEZE.md` | `DEC-013` (Resolved) | `CONTRACT-005 v1.1` (Frozen) | None (Contract Freeze Gate) | `COMPLETED` |
 
 ---
 
 ## Classification Summary
 
-- **Total Material Prompts Cataloged:** 18
-- **`ORIGINAL` Prompts:** 7 (`P04-001`, `P04-002`, `P04-003`, `P04-004`, `P04-005`, `P05-002`, `P05-003`)
+- **Total Material Prompts Cataloged:** 19
+- **`ORIGINAL` Prompts:** 8 (`P04-001`, `P04-002`, `P04-003`, `P04-004`, `P04-005`, `P05-002`, `P05-003`, `P05-004`)
 - **`RECONSTRUCTED` Prompts:** 10 (`P00-001` through `P03.6-002`)
 - **`REFERENCED` / `RESERVED` Prompts:** 1 (`P05-001`)
 - **`DERIVED` Records:** 0
+
 
 
