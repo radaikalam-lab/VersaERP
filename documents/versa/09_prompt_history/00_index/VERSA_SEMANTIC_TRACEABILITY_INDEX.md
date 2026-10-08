@@ -35,9 +35,11 @@ Reverse Traceability:
 | **`SEM-UOM-001`** (Physical GLM Relationship) | `P04-001`, `P04-002` | Fabric Physical Formula | `DEC-011` | `02_contracts/VERSA_QUALITY_CONTRACT.md` §3 | `bench/apps/versa_quality/versa_quality/evaluator.py` | `test_quality_runtime.py::TestPhysicalMeasurementValidation` | `05_validation/VERSA_TEXTILE_MEASUREMENT_EVIDENCE.md` | `VERIFIED` |
 | **`SEM-JOB-001`** (Job Work Mass Balance) | `P04-001`, `P04-002` | Tiruppur Process Loss | TBD (Phase 5/6) | `02_contracts/VERSA_JOBWORK_CONTRACT.md` | Deferred to Phase 6 | Deferred | `05_validation/VERSA_JOB_WORK_SEMANTIC_GAP_ANALYSIS.md` | `DEFERRED` |
 | **`SEM-MAT-001`** (Order Matrix Conservation) | `P04-001`, `P04-002` | ERPNext #41950 Case | TBD (Phase 5) | `02_contracts/VERSA_O2C_CONTRACT.md` | Deferred to Phase 5 | Deferred | `05_validation/VERSA_APPAREL_MATRIX_SEMANTIC_GAP_ANALYSIS.md` | `DEFERRED` |
-| **`SEM-TEX-001`** (Process Mass Balance) | `P05-002` | Tiruppur Milling Practices | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-001`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
-| **`SEM-TEX-002`** (Piece-Goods Dynamic GLM) | `P05-002` | ISO 3801 / ASTM D3776 | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-002`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
-| **`SEM-TEX-003`** (Fabric Roll Traceability Overlay) | `P05-002` | ERPNext Stock Ledger Invariant | `DEC-012` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-003`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md` | `VERIFIED` |
+| **`SEM-TEX-001`** (Process Mass Balance) | `P05-002`, `P05-003` | Tiruppur Milling Practices | `DEC-012`, `DEC-013` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-001`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md` | `VERIFIED` |
+| **`SEM-TEX-002`** (Piece-Goods Dynamic GLM) | `P05-002`, `P05-003` | ISO 3801 / ASTM D3776 | `DEC-012`, `DEC-013` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-002`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md` | `VERIFIED` |
+| **`SEM-TEX-003`** (Fabric Roll Traceability Overlay) | `P05-002`, `P05-003` | ERPNext Stock Ledger Invariant | `DEC-012`, `DEC-013` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-003`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md` | `VERIFIED` |
+| **`SEM-TEX-004`** (Tolerance Precedence Governance) | `P05-003` | Tiruppur Commercial Invariants | `DEC-013` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-001`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md` | `VERIFIED` |
+| **`SEM-TEX-005`** (DAG Material Allocation) | `P05-003` | Piece-Goods Lineage Metrology | `DEC-013` | `02_contracts/VERSA_TEXTILE_PROCESS_CONTRACT.md` (`R-TEX-003`) | Spec Gate (Phase 5) | Deferred (Spec Gate) | `05_validation/VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md` | `VERIFIED` |
 
 ---
 
@@ -111,4 +113,22 @@ Architecture VERSA_TEXTILE_PROCESS_ARCHITECTURE.md (Non-Invasive Overlay)
    ▼
 Validation VERSA_PHASE_5_SEMANTIC_VALIDATION_REPORT.md & Report (PASS)
 ```
+
+### Chain 4: Adversarial Contract Review & Invariant Hardening
+```text
+Prompt P05-003 (Adversarial Contract Review)
+   │
+   ▼
+Findings F-TEX-001 to F-TEX-005 (Financial, Tolerance & Lineage Attacks)
+   │
+   ▼
+Decision Candidates DEC-013.1 to DEC-013.5
+   │
+   ▼
+Contract CONTRACT-005 Clarifications (Debit Candidate, DAG Lineage, Conservation Models)
+   │
+   ▼
+Validation VERSA_PHASE_5_ADVERSARIAL_CONTRACT_REVIEW.md (PASS WITH CLARIFICATIONS)
+```
+
 

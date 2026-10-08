@@ -27,14 +27,16 @@
 | **`P04-005`** | Phase 4E | `ORIGINAL` | Final evidence audit, ASTM D5430 provenance & Phase 4 closure | `06_decisions/VERSA_PHASE_4_CLOSURE_DECISION.md` | `DEC-011` | None | Phase 4 Formally Closed | `COMPLETED` |
 | **`P05-001`** | Phase 5 | `RESERVED` | Textile processing & domain workflows initiation | `09_prompt_history/PHASE_05/README.md` | TBD | Phase 5 Scoping | Phase 5 Bootstrap | `PENDING` |
 | **`P05-002`** | Phase 5 | `ORIGINAL` | Textile processing & fabric processing semantic model definition & gate | `09_prompt_history/PHASE_05/P05_002_TEXTILE_PROCESS_SEMANTIC_DEFINITION.md` | `DEC-012` | `CONTRACT-005` | None (Specification Gate Only) | `COMPLETED` |
+| **`P05-003`** | Phase 5 | `ORIGINAL` | Adversarial textile contract review of CONTRACT-005 & decision candidates | `09_prompt_history/PHASE_05/P05_003_ADVERSARIAL_TEXTILE_CONTRACT_REVIEW.md` | `DEC-013` (Cand.) | `CONTRACT-005` (Clarifications) | None (Review Gate Only) | `COMPLETED` |
 
 ---
 
 ## Classification Summary
 
-- **Total Material Prompts Cataloged:** 17
-- **`ORIGINAL` Prompts:** 6 (`P04-001`, `P04-002`, `P04-003`, `P04-004`, `P04-005`, `P05-002`)
+- **Total Material Prompts Cataloged:** 18
+- **`ORIGINAL` Prompts:** 7 (`P04-001`, `P04-002`, `P04-003`, `P04-004`, `P04-005`, `P05-002`, `P05-003`)
 - **`RECONSTRUCTED` Prompts:** 10 (`P00-001` through `P03.6-002`)
 - **`REFERENCED` / `RESERVED` Prompts:** 1 (`P05-001`)
 - **`DERIVED` Records:** 0
+
 
